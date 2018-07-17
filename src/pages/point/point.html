@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>
+        Punto Nro 1
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen elestic-header>
+  <section class="housing-image"
+           [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
+    <section class="housing-banner" padding>
+      <span class="housing-title">{{estateProperty.name}}</span>
+      <span class="price">{{estateProperty.price | currency:'USD' }}</span>
+    </section>
+  </section>
+  <section class="main-content">
+    <ion-grid class="main-features">
+      <ion-row>
+        <ion-col text-center *ngFor="let feature of estateProperty.features" (click)="scan()">
+          <ion-icon [name]="feature.icon"></ion-icon>
+          <span class="item-block">{{feature.title}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="listing-details">
+      <ion-row>
+        <p margin-left margin-right no-margin-top style="text-align: justify"> 
+        </p>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>
+<ion-footer>
+  <button ion-button large full no-margin color="danger" >
+    Cancelar
+  </button>
+</ion-footer>

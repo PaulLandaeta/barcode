@@ -1,0 +1,45 @@
+<!--
+  Generated template for the CheckListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>checkList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Focos</ion-label>
+      <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Cables</ion-label>
+      <ion-checkbox [(ngModel)]="sausage" ></ion-checkbox>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Condensador</ion-label>
+      <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ventiladores</ion-label>
+      <ion-checkbox [(ngModel)]="ventiladores"></ion-checkbox>
+    </ion-item>
+  
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <button ion-button large full no-margin color="secondary" (click)="finalizarMantenimiento()">
+    Finalizar Mantenimiento
+  </button>
+</ion-footer>
