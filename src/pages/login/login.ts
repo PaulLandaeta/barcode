@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController } from 'ionic-angular';
 import { PointPage } from '../point/point';
-import { ListPointPage } from '../list-point/list-point';
 
 @IonicPage()
 @Component({
@@ -42,7 +41,7 @@ export class LoginPage {
     } else {
       const userEmail = this.loginForm.value.email;
       const userPassword = this.loginForm.value.password;
-      this.navCtrl.setRoot(ListPointPage);
+      this.navCtrl.setRoot('ListPointPage');
       console.log('user data', userEmail, userPassword);
     }
   }
