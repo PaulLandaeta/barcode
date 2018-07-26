@@ -23,7 +23,7 @@ import { MODULES, PROVIDERS } from './app.imports';
   ],
   providers: [
     PROVIDERS,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
