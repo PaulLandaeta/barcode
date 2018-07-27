@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController } from 'ionic-angular';
 import { PointPage } from '../point/point';
+import { AuthService } from '../../core/auth.service';
 
 @IonicPage()
 @Component({
@@ -19,7 +20,8 @@ export class LoginPage {
   public loginForm: any;
 
   constructor(public formBuilder: FormBuilder,
-  private navCtrl:NavController) {
+              private navCtrl:NavController,
+            private auth: AuthService) {
     this.loginForm = formBuilder.group({
       email: ['test@gmail.com', Validators.required],
       password: ['123456',Validators.required]
@@ -46,4 +48,15 @@ export class LoginPage {
     }
   }
 
+  login() {
+      this.auth.emailLogin(this.loginForm.value['email'], this.loginForm.value['password'])
+      .then(data => {
+        var pageRoot = 'ListPointPage';
+        if (true) {
+          pageRoot = 'UserPage';
+        }
+        this.navCtrl.setRoot(pageRoot);
+      })
+      .catch(error => console.log(error));  
+  }
 }

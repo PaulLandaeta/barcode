@@ -9,7 +9,7 @@
   </ion-slides>
   <div class="login-container">
     <img class="logo" src="assets/imgs/logo/logo.png" />
-    <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
       <ion-item>
         <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
       </ion-item>

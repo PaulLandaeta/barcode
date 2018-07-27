@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="userForm" (ngSubmit)="createUser()">
+    <ion-item>
+      <ion-input formControlName="name" type="text" placeholder="Names"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <button ion-button margin color="danger">CREATE</button>
+  </form>
+</ion-content>
